@@ -23,9 +23,9 @@ const Dashboard = () => {
       </GeneralContextProvider>
       <div className="content">
         <Outlet /> {/* Child routes will render here */}
-        <button
+        <button 
           onClick={handleLogout}
-          style={{ position: "fixed", top: "27px", right: "25px" }}
+          style={{ position: "fixed", top: "27px", right: "25px",color:"black" }}
         >
           Logout
         </button>

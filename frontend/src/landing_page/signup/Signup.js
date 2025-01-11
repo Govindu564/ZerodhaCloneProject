@@ -51,7 +51,7 @@ const SignupPage = () => {
       setCurrentUser(res.data.userId);
 
       setLoading(false);
-      window.location.href = "/"; 
+      // window.location.href = "/"; 
     } catch (err) {
       const errMsg =
         err.response?.data?.message || "Signup failed. Please try again.";

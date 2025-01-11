@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useAuth } from "../authContext"; 
+import { useAuth } from "../authContext";
 import { Box, Button, PageHeader } from "@primer/react";
 import { Link } from "react-router-dom";
-import "./Login.css"
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -37,7 +37,6 @@ const Login = () => {
       localStorage.setItem("userId", res.data.userId);
       localStorage.setItem("username", res.data.username);
 
-    
       // Update the current user in context
       setCurrentUser(res.data.userId);
 
@@ -64,7 +63,8 @@ const Login = () => {
         </div>
 
         <div className="login-box">
-          {error && <p className="error-message">{error}</p>} {/* Display errors */}
+          {error && <p className="error-message">{error}</p>}{" "}
+          {/* Display errors */}
           <div>
             <label className="label">Email address</label>
             <input
@@ -77,7 +77,6 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
           <div>
             <label className="label">Password</label>
             <input
@@ -90,7 +89,6 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
           <Button
             variant="primary"
             className="login-btn"
@@ -103,7 +101,7 @@ const Login = () => {
 
         <div className="pass-box">
           <p>
-            Don't have an account? <Link to={"/signup"}>Sign Up</Link>
+            <Link>Forgot user ID or password?</Link>
           </p>
         </div>
       </div>
